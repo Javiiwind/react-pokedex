@@ -15,7 +15,7 @@ const Navbar = () => {
               />
               </div>
               <div>
-                  boton corazon
+              ♥
               </div>
           </nav>
           </div>
