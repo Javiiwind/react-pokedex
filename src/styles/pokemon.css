@@ -13,6 +13,15 @@
   height: 5rem;
 }
 
+.pokemon-type {
+  display: flex;
+}
+
+.pokemon-type-text {
+  margin-right: 0.625rem;
+  text-transform: capitalize;
+}
+
 .card-body {
   display: flex;
   flex-direction: column;
@@ -26,6 +35,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.625rem;
+  flex: 1;
 }
 
 .card-top h3 {

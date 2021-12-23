@@ -1,8 +1,13 @@
 import "../styles/pokemon.css";
 
 const Pokemon = ({pokemons}) => {
+
+
+    const redHeart = "&#10084;&#65039;";
+    const blackHeart = "🖤";
+
     return (
-        <div className="pokemon-card">
+            <div className="pokemon-card">
             <div className="pokemon-img-container">
                <img className="pokemon-img" src={pokemons.sprites.front_default} alt={pokemons.name} /> 
             </div>
@@ -13,15 +18,17 @@ const Pokemon = ({pokemons}) => {
                         #{pokemons.id}
                     </div>
                 </div>
-                <div>
-                    <div>
+                <div className="card-bottom">
+                    <div className="pokemon-type">
                         {pokemons.types.map((type, idx) => {
                             return(
-                                <div key={idx}>{type.name}</div>
+                                <div key={idx} className="pokemon-type-text">{type.type.name}</div>
                             )
                         })}
                     </div>
-                    <div>♥</div>
+                    <button>
+                        <div className="pokemon-favorite">{blackHeart}</div>
+                    </button>
                 </div>
             </div>
         </div>

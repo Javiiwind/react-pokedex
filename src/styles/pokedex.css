@@ -8,7 +8,7 @@
 
 .pokedex-grid {
   display: grid;
-  grid-auto-columns: repeat(3, 1fr);
-  grid-gap: 0.625rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
   padding: 0px, 0.625rem;
 }
