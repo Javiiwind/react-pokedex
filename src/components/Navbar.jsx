@@ -1,6 +1,12 @@
+import React from "react";
+import FavoriteContext from "../contexts/favoritesContext";
 import "../styles/navbar.css";
 
+const { useContext } = React;
+
 const Navbar = () => {
+
+    const {favoritePokemons} = useContext(FavoriteContext);
     
     const pokeLogo = "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
     
@@ -15,7 +21,7 @@ const Navbar = () => {
               />
               </div>
               <div>
-              &#10084;&#65039; {100}
+              &#10084;&#65039; {favoritePokemons.length}
               </div>
           </nav>
           </div>
