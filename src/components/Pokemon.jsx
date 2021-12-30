@@ -2,38 +2,39 @@ import { useContext } from "react";
 import FavoriteContext from "../contexts/favoritesContext";
 import "../styles/pokemon.css";
 
-const Pokemon = ({pokemons}) => {
+const Pokemon = (props) => {
 
+    const { pokemon } = props;
     const {favoritePokemons, updateFavoritePokemons} = useContext(FavoriteContext);
 
 
     const redHeart = "❤️";
     const blackHeart = "🖤";
-    const heart = favoritePokemons.includes(pokemons.name) ? redHeart : blackHeart;
+    const heart = favoritePokemons.includes(pokemon.name) ? redHeart : blackHeart;
 
     const clickHeart = (e) => {
         e.preventDefault();
-        updateFavoritePokemons(pokemons.name);
+        updateFavoritePokemons(pokemon.name);
     }
 
     return (
             <div className="pokemon-card">
             <div className="pokemon-img-container">
-               <img className="pokemon-img" src={pokemons.sprites.front_default} alt={pokemons.name} /> 
+               <img className="pokemon-img" src={pokemon.sprites.front_default} alt={pokemon.name} /> 
             </div>
             <div className="card-body">
                 <div className="card-top">
-                    <h3>{pokemons.name}</h3>
+                    <h3>{pokemon.name}</h3>
                     <div>
-                        #{pokemons.id}
+                        #{pokemon.id}
                     </div>
                 </div>
                 <div className="card-bottom">
                     <div className="pokemon-type">
-                        {pokemons.types.map((type, idx) => {
+                        {pokemon.types.map((type, idx) => {
                             return(
                                 <div key={idx} className="pokemon-type-text">{type.type.name}</div>
-                            )
+                            );
                         })}
                     </div>
                     <button onClick={clickHeart}>
