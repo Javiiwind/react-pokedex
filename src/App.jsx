@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Pokedex from "./components/Pokedex";
 import Searchbar from "./components/Searchbar";
 import { FavoriteProvider } from "./contexts/favoritesContext";
+import "./app.css";
 
 const localStorageKey = "favorite_pokemon";
 
@@ -87,7 +88,7 @@ function App() {
             <div className="App">
             <Searchbar onSearch={onSearch}/>
             {notFound ? (
-              <div>
+              <div className="not-found">
                 No se ha encontrado el Pokemon...
               </div>            
             ) : (

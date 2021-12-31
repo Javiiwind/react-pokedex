@@ -3,3 +3,25 @@
   flex-direction: row;
   align-items: center;
 }
+
+.pagination-btn {
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin: 0px 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.text-pagination {
+  font-size: 1.25rem;
+  justify-content: center;
+}
+
+.icon span {
+  font-size: 1.75rem;
+}

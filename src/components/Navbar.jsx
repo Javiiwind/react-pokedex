@@ -20,7 +20,7 @@ const Navbar = () => {
               className="navbar-image"
               />
               </div>
-              <div>
+              <div className="navbar-heart">
               &#10084;&#65039; {favoritePokemons.length}
               </div>
           </nav>

@@ -9,8 +9,14 @@ nav {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  background: #000;
+  color: #fff;
 }
 
 .navbar-image {
   width: 10rem;
+}
+
+.navbar-heart {
+  font-size: 1.75rem;
 }
