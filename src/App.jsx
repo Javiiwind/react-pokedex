@@ -33,6 +33,7 @@ function App() {
         } catch(err) {}
     };
 
+    // carga pokes favoritos
     const loadFavoritePokemons = () => {
       const pokemons = JSON.parse(window.localStorage.getItem(localStorageKey)) || [];
       setFavorites(pokemons);
@@ -48,6 +49,7 @@ function App() {
       }
     }, [page]);
 
+    // actualiza favoritos
     const updateFavoritePokemons = (name) => {
       const updated = [...favorites];
       const isFavorite = updated.indexOf(name);
@@ -60,6 +62,7 @@ function App() {
       window.localStorage.setItem(localStorageKey, JSON.stringify(updated));
     };
 
+    // barra de busqueda
     const onSearch = async (pokemon) => {
       if(!pokemon) {
         return fetchPokemons();

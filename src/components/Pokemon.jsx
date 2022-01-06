@@ -12,6 +12,7 @@ const Pokemon = (props) => {
     const blackHeart = "🖤";
     const heart = favoritePokemons.includes(pokemon.name) ? redHeart : blackHeart;
 
+    //agrega pokemon a los favoritos
     const clickHeart = (e) => {
         e.preventDefault();
         updateFavoritePokemons(pokemon.name);
