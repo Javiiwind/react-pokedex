@@ -42,6 +42,10 @@ const Pokemon = (props) => {
                         <div className="pokemon-favorite">{heart}</div>
                     </button>
                 </div>
+                <div className="pokemon-info">
+                        <div className="pokemon-info-text">Height: {pokemon.height}</div>
+                        <div className="pokemon-info-text">Weight: {pokemon.weight}</div>
+                </div>
             </div>
         </div>
     )

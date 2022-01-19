@@ -23,6 +23,17 @@
 .pokemon-type-text {
   margin-right: 0.625rem;
   text-transform: capitalize;
+  margin-top: 00.625rem;
+}
+
+.pokemon-info {
+  display: flex;
+  margin-top: 00.625rem;
+  text-transform: capitalize;
+}
+
+.pokemon-info-text {
+  margin-right: 0.625rem;
 }
 
 .card-body {
